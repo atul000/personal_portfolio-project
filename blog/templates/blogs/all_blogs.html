@@ -1,1 +1,6 @@
 <p>hello blog</p>
+
+{% for blog in blogs %}
+<p>{{blog.title}}</p>
+<p>{{blog.description}}</p>
+{% endfor %}
