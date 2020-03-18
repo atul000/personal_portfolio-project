@@ -1,4 +1,7 @@
-{% extends 'portfolio/base.html' %} {% block content %} {% for i in blog %}
-<h1>{{i.title}}</h1>
-<h2>--{{i.date|date:'F jS Y'}}--</h2>
-{{i.description|safe}} {% endfor %} {% endblock %}
+{% extends "portfolio/base.html" %} {% block content %} {% for i in blog %}
+
+<h1 class="text-center mt-5" id="blogdetailtitle">{{ i.title }}</h1>
+
+<h5 class="text-center text-muted mb-5">{{ i.date|date:'F jS Y' }}</h5>
+
+{{ i.description|safe }} {% endfor %} {% endblock %}
